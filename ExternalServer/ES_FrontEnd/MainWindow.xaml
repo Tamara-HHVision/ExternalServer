@@ -45,7 +45,7 @@
                     <Image Height="55" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ClientTab.png"/>
                 </Button>
 
-                <Button x:Name="Btn_WeatherSettings" Style="{StaticResource TabControlButton}">
+                <Button x:Name="Btn_WeatherSettings" Style="{StaticResource TabControlButton}" Click="OnBtn_WeatherSettings_Click">
                     <Image Height="55" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/WeatherTab.png"/>
                 </Button>
 
@@ -54,8 +54,14 @@
                 </Button>
             </StackPanel>
             
-
         </Grid>
+
+        <Grid Grid.Row="1">
+            <Canvas x:Name="Cnvs_MainView" HorizontalAlignment="Left" VerticalAlignment="Top">
+                
+            </Canvas>
+        </Grid>
+        
         <!--#endregion-->
 
     </Grid>
