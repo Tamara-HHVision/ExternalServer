@@ -28,13 +28,19 @@ namespace ES_FrontEnd
 
         private void OnBtn_WeatherSettings_Click(object sender, RoutedEventArgs e)
         {
+            Cnvs_MainView.Children.Clear();
             UC_Weather uc_weather = new UC_Weather();
 
-            Canvas.SetLeft(uc_weather, 0);
-            Canvas.SetTop(uc_weather, 0);
-            Canvas.SetRight(uc_weather, 0);
-
             Cnvs_MainView.Children.Add(uc_weather);
+        }
+
+        private void OnBtn_ScenarioControl_Click(object sender, RoutedEventArgs e)
+        {
+            Cnvs_MainView.Children.Clear();
+
+            UC_Scenario uc_Scenario = new UC_Scenario();
+
+            Cnvs_MainView.Children.Add(uc_Scenario);
         }
     }
 }

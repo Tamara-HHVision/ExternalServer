@@ -17,7 +17,11 @@
         </Style>
     </UserControl.Resources>
 
+    
+    
     <Grid Width="1440" Height="945">
+        
+        <!--#region ___ Weather Buttons ___-->
         <WrapPanel Margin="250 150 250 500">
             <Button Style="{StaticResource WeatherButton}">
                 <Image Height="70" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_ClearSky.png"/>
@@ -64,7 +68,10 @@
             </Button>
 
         </WrapPanel>
+        <!--#endregion-->
 
+        
+        <!--#region ___ Cancel & Save Buttons___-->
         <StackPanel Orientation="Horizontal" Margin="450,480,450,400">
             <Button Height="auto" Width="250" Background="Transparent" BorderBrush="Transparent">
                 <Image Height="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Cancel.png"/>
@@ -74,8 +81,7 @@
                 <Image Height="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Save.png"/>
             </Button>
         </StackPanel>
-
-        <Image Height="15" Width="157" Margin="1200 850 50 50" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Logo/HHVision_Logo.png"/>
-
+        <!--#endregion-->
+       
     </Grid>
 </UserControl>

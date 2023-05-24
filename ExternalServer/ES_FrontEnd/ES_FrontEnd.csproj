@@ -26,12 +26,14 @@
     <None Remove="Resources\Images\Btn_PartlyCloudy.png" />
     <None Remove="Resources\Images\Btn_Rain.png" />
     <None Remove="Resources\Images\Btn_Save.png" />
+    <None Remove="Resources\Images\Btn_SaveConfig.png" />
     <None Remove="Resources\Images\Btn_Snow.png" />
     <None Remove="Resources\Images\Btn_Thunderstorm.png" />
     <None Remove="Resources\Images\ClientTab.png" />
     <None Remove="Resources\Images\ScenarioTab.png" />
     <None Remove="Resources\Images\ShipTab.png" />
     <None Remove="Resources\Images\WeatherTab.png" />
+    <None Remove="Resources\Logo\Foerde5G_col_Logo.png" />
     <None Remove="Resources\Logo\Foerde5G_Logo.png" />
     <None Remove="Resources\Logo\HHVision_Logo.png" />
   </ItemGroup>
@@ -70,6 +72,9 @@
     <Resource Include="Resources\Images\Btn_Save.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Images\Btn_SaveConfig.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Btn_Snow.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -88,12 +93,15 @@
     <Resource Include="Resources\Images\WeatherTab.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Logo\Foerde5G_col_Logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Logo\Foerde5G_Logo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <SplashScreen Include="Resources\Logo\HHVision_Logo.png">
+    <Resource Include="Resources\Logo\HHVision_Logo.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </SplashScreen>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
