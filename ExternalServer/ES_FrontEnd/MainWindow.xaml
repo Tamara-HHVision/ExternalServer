@@ -18,7 +18,7 @@
         </Style>
     </Window.Resources>
 
-    <Grid Background="Black">
+    <Grid Background="Black">          <!--Full window Grid-->
         <Grid.RowDefinitions>
             <RowDefinition Height="78"/> <!--TabControl-->
             <RowDefinition Height="*"/>  <!--MainPanel-->
@@ -33,11 +33,12 @@
                 <ColumnDefinition Width="*"/>       <!--TabItems-->
             </Grid.ColumnDefinitions>
 
+            <!--Project Branding-->
             <Image Grid.Column="0" Margin="10 5 5 5" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Logo/Foerde5G_Logo.png"/>
 
-
+            <!--#region __Tab Control Items___-->
             <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="366 23 0 0">            <!--Button Order-->
-                <Button x:Name="Btn_ScenarioControl" Style="{StaticResource TabControlButton}">
+                <Button x:Name="Btn_ScenarioControl" Style="{StaticResource TabControlButton}" Click="OnBtn_ScenarioControl_Click">
                     <Image Height="55" Width="auto"  Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ScenarioTab.png"/>
                 </Button>
 
@@ -45,7 +46,7 @@
                     <Image Height="55" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ClientTab.png"/>
                 </Button>
 
-                <Button x:Name="Btn_WeatherSettings" Style="{StaticResource TabControlButton}">
+                <Button x:Name="Btn_WeatherSettings" Style="{StaticResource TabControlButton}" Click="OnBtn_WeatherSettings_Click">
                     <Image Height="55" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/WeatherTab.png"/>
                 </Button>
 
@@ -53,10 +54,22 @@
                     <Image Height="55" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ShipTab.png"/>
                 </Button>
             </StackPanel>
+            <!--#endregion-->
             
-
         </Grid>
         <!--#endregion-->
+
+        
+        <Grid Grid.Row="1">
+            <Canvas x:Name="Cnvs_MainView" HorizontalAlignment="Left" VerticalAlignment="Top">
+                
+            </Canvas>
+
+            <!--HHV Branding Logo-->
+            <Image Height="15" Width="157" Margin="1200 850 0 0" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Logo/HHVision_Logo.png"/>
+
+        </Grid>
+        
 
     </Grid>
 </Window>

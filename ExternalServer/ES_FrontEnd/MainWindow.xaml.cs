@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ES_FrontEnd.UserControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,21 @@ namespace ES_FrontEnd
             InitializeComponent();
         }
 
+        private void OnBtn_WeatherSettings_Click(object sender, RoutedEventArgs e)
+        {
+            Cnvs_MainView.Children.Clear();
+            UC_Weather uc_weather = new UC_Weather();
 
+            Cnvs_MainView.Children.Add(uc_weather);
+        }
+
+        private void OnBtn_ScenarioControl_Click(object sender, RoutedEventArgs e)
+        {
+            Cnvs_MainView.Children.Clear();
+
+            UC_Scenario uc_Scenario = new UC_Scenario();
+
+            Cnvs_MainView.Children.Add(uc_Scenario);
+        }
     }
 }

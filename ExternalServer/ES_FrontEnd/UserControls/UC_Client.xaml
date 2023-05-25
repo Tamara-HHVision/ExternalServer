@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="ES_FrontEnd.UserControls.UC_Client"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ES_FrontEnd.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="946" d:DesignWidth="1440">
+
+
+    <Grid Width="1440" Height="945">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        
+        <Grid Grid.Row="0">
+            <Label Content="Client List" Height="37" Width="155" FontSize="30" FontFamily="Montserrat" Foreground="White" Margin="316,72,969,46"/>
+            <Button x:Name="Btn_AddClient" Height="37" Width="76" Margin="1048,72,316,46" Background="#FA9600" Content="+ Add" FontFamily="Montserrat" FontSize="20" Click="OnBtn_AddClient_Click"/>
+        </Grid>
+
+        
+        
+        <Grid Grid.Row="1">
+            <WrapPanel x:Name="Wrp_ClientList" Margin="316 157">
+                
+            </WrapPanel>    
+        </Grid>
+        
+    </Grid>
+</UserControl>

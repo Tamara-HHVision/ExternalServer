@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="ES_FrontEnd.UserControls.UC_Scenario"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ES_FrontEnd.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="946" d:DesignWidth="1440">
+
+    <UserControl.Resources>
+        <Style x:Key="UserInput" TargetType="TextBox">
+            <Setter Property="Height" Value="46"/>
+            <Setter Property="Width"  Value="368"/>
+            <Setter Property="Background" Value="#2D2D2D"/>
+            <Setter Property="FontFamily" Value="Poppins"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="12"/>
+        </Style>
+
+        <Style x:Key="InputLabel" TargetType="Label">
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Width" Value="115"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="#B7B7B7"/>
+            <Setter Property="Padding" Value="0 5 0 0"/>
+        </Style>
+
+        <Style x:Key="Buttons" TargetType="Button">
+            <Setter Property="Height" Value="44"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Padding" Value="0 -7 0 0"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+        
+    </UserControl.Resources>
+
+    
+    
+    <Grid Width="1440" Height="945">    <!--Full Grid-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="500"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        
+        
+        
+        <!--#region ___Lower Region___-->
+        <Grid Grid.Row="1">
+            <Canvas Width="808" Height="216" Margin="316 10 316 200" Background="#1D1D1D">
+
+                <Label Style="{StaticResource InputLabel}" Content="Server Data Port"    Margin="24 24 669 175"/>
+                <Label Style="{StaticResource InputLabel}" Content="Server Command Port" Margin="416 24 235 175"/>
+
+                <TextBox Style="{StaticResource UserInput}" Margin="24 47 416 123"/>
+                <TextBox Style="{StaticResource UserInput}" Margin="416 47 24 123"/>
+
+                <Button Style="{StaticResource Buttons}" Margin="279 148 279 24" Padding="-0 -7 0 0" VerticalContentAlignment="Center">
+                    <Image Width="auto" Height="60" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_SaveConfig.png"/>
+                </Button>
+            </Canvas>
+
+            <StackPanel Orientation="Horizontal" Margin="458 250 458 108">
+                <Button Style="{StaticResource Buttons}">
+                    <Image Height="60" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_StartScenario.png"/>
+                </Button>
+
+                <Button Style="{StaticResource Buttons}" Margin="20 0 0 0" >
+                    <Image Height="60" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_StopScenario.png"/>
+                </Button>
+            </StackPanel>
+
+        </Grid>
+        <!--#endregion-->
+        
+        
+        
+    </Grid>
+    
+</UserControl>
