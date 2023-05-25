@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Icons\Icn_Settings.png" />
     <None Remove="Resources\Images\Btn_Blizzard.png" />
     <None Remove="Resources\Images\Btn_Cancel.png" />
     <None Remove="Resources\Images\Btn_ClearSky.png" />
@@ -39,6 +40,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Icons\Icn_Settings.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Btn_Blizzard.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
