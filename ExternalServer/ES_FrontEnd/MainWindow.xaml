@@ -42,7 +42,7 @@
                     <Image Height="55" Width="auto"  Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ScenarioTab.png"/>
                 </Button>
 
-                <Button x:Name="Btn_ClientSettings" Style="{StaticResource TabControlButton}">
+                <Button x:Name="Btn_ClientSettings" Style="{StaticResource TabControlButton}" Click="OnBtn_ClientSettings_Click">
                     <Image Height="55" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ClientTab.png"/>
                 </Button>
 
@@ -50,7 +50,7 @@
                     <Image Height="55" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/WeatherTab.png"/>
                 </Button>
 
-                <Button x:Name="Btn_ShipSettings" Style="{StaticResource TabControlButton}">
+                <Button x:Name="Btn_ShipSettings" Style="{StaticResource TabControlButton}" Click="OnBtn_ShipSettings_Click">
                     <Image Height="55" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ShipTab.png"/>
                 </Button>
             </StackPanel>

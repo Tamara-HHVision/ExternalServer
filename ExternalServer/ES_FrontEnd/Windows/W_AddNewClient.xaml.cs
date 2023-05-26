@@ -7,9 +7,12 @@ namespace ES_FrontEnd.Windows
     /// </summary>
     public partial class W_AddNewClient : Window
     {
-        public W_AddNewClient()
+        Controller m_controller;
+
+        public W_AddNewClient(Controller _controller)
         {
             InitializeComponent();
+            m_controller = _controller;
         }
 
     }
