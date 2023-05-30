@@ -1,18 +1,4 @@
-﻿using ES_FrontEnd.UserControls;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace ES_FrontEnd
 {
@@ -21,26 +7,33 @@ namespace ES_FrontEnd
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Controller m_controller;
+
         public MainWindow()
         {
             InitializeComponent();
+            m_controller = new Controller(this);
+        }
+
+
+        private void OnBtn_ScenarioControl_Click(object sender, RoutedEventArgs e)
+        {
+            m_controller.ShowScenarioControl();
+        }
+
+        private void OnBtn_ClientSettings_Click(object sender, RoutedEventArgs e)
+        {
+            m_controller.ShowClientSettings();
         }
 
         private void OnBtn_WeatherSettings_Click(object sender, RoutedEventArgs e)
         {
-            Cnvs_MainView.Children.Clear();
-            UC_Weather uc_weather = new UC_Weather();
-
-            Cnvs_MainView.Children.Add(uc_weather);
+            m_controller.ShowWeatherSettings();
         }
 
-        private void OnBtn_ScenarioControl_Click(object sender, RoutedEventArgs e)
+        private void OnBtn_ShipSettings_Click(object sender, RoutedEventArgs e)
         {
-            Cnvs_MainView.Children.Clear();
-
-            UC_Scenario uc_Scenario = new UC_Scenario();
-
-            Cnvs_MainView.Children.Add(uc_Scenario);
+            m_controller.ShowShipSettings();
         }
     }
 }

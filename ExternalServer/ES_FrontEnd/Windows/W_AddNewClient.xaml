@@ -1,5 +1,7 @@
 ﻿<Window x:Class="ES_FrontEnd.Windows.W_AddNewClient"
         WindowStyle="None"
+        ResizeMode="NoResize"
+        
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -53,7 +55,7 @@
     <Grid Background="#1D1D1D" Height="357" Width="750" VerticalAlignment="Top">
         <Label Margin="303 24 302 311" Content="Add New Client" FontFamily="Montserrat" FontSize="18" Foreground="#FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="-5"/>
 
-        <Button Margin="710 24 24 317" Content="X" FontSize="20" Padding="0 -7 0 0" FontWeight="Bold" Foreground="#B7B7B7" Background="Transparent" BorderBrush="Transparent"/>
+        <Button x:Name="Btn_CloseClientWindow" Margin="710 24 24 317" Content="X" FontSize="20" Padding="0 -7 0 0" FontWeight="Bold" Foreground="#B7B7B7" Background="Transparent" BorderBrush="Transparent" Click="OnBtn_CloseClientWindow_Click"/>
 
         <Label Style="{StaticResource TextLabel}" Content="Client IP" Margin="24 79 620 261"/>
         <TextBox Style="{StaticResource InputField}" Text="127.0.0.0" Margin="24 102 388 209"/>
