@@ -15,5 +15,9 @@ namespace ES_FrontEnd.Windows
             m_controller = _controller;
         }
 
+        private void OnBtn_CloseClientWindow_Click(object sender, RoutedEventArgs e)
+        {
+            m_controller.CloseAddClientWindow(this);
+        }
     }
 }
