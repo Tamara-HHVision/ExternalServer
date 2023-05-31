@@ -58,13 +58,13 @@
         <Button x:Name="Btn_CloseClientWindow" Margin="710 24 24 317" Content="X" FontSize="20" Padding="0 -7 0 0" FontWeight="Bold" Foreground="#B7B7B7" Background="Transparent" BorderBrush="Transparent" Click="OnBtn_CloseClientWindow_Click"/>
 
         <Label Style="{StaticResource TextLabel}" Content="Client IP" Margin="24 79 620 261"/>
-        <TextBox Style="{StaticResource InputField}" Text="127.0.0.0" Margin="24 102 388 209"/>
+        <TextBox x:Name="TxtBx_ClientIP" Style="{StaticResource InputField}" Text="127.0.0.0" Margin="24 102 388 209" TextChanged="OnTxtBx_ClientIP_TextChanged"/>
 
-        <Label Style="{StaticResource TextLabel}" Content="Server Command Port" Margin="386 79 205 261"/>
-        <TextBox Style="{StaticResource InputField}" Text="5555" Margin="386 102 26 209"/>
+        <Label Style="{StaticResource TextLabel}" Content="Client Command Port" Margin="386 79 205 261"/>
+        <TextBox x:Name="TxtBx_ClientCommandPort" Style="{StaticResource InputField}" Text="5555" Margin="386 102 26 209" TextChanged="OnTxtBx_ClientCommandPort_TextChanged"/>
 
         <Label Style="{StaticResource TextLabel}" Content="Client Data Port" Margin="24 172 611 168"/>
-        <TextBox Style="{StaticResource InputField}" Text="5555" Margin="24 195 388 116"/>
+        <TextBox x:Name="TxtBx_ClientDataPort" Style="{StaticResource InputField}" Text="5555" Margin="24 195 388 116" TextChanged="OnTxtBx_ClientDataPort_TextChanged"/>
 
         <Label Style="{StaticResource TextLabel}" Content="ClientType" Margin="386 172 184 168"/>
         <ComboBox Text="5555" Margin="386 195 26 116" BorderBrush="Transparent">
@@ -100,11 +100,11 @@
 
 
         <StackPanel Orientation="Horizontal" Margin="113 289 113 24">
-            <Button Style="{StaticResource Buttons}">
+            <Button Style="{StaticResource Buttons}" Click="OnBtn_CloseClientWindow_Click">
                 <Image Height="60" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Cancel.png"/>
             </Button>
 
-            <Button Style="{StaticResource Buttons}" Margin="20 0 0 0" >
+            <Button x:Name="Btn_SaveClient" Style="{StaticResource Buttons}" Margin="20 0 0 0" Click="OnBtn_SaveClient_Click">
                 <Image Height="60" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Save.png"/>
             </Button>
         </StackPanel>

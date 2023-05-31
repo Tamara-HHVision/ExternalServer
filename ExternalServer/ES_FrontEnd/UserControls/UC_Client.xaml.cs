@@ -8,18 +8,23 @@ namespace ES_FrontEnd.UserControls
     /// </summary>
     public partial class UC_Client : UserControl
     {
-        Controller m_controller;
+        public WrapPanel ClientWrapPanel { get; private set; }
+
+        private Controller m_controller;
 
 
         public UC_Client(Controller _controller)
         {
             InitializeComponent();
             m_controller = _controller;
+            ClientWrapPanel = Wrp_ClientList;
         }
 
         private void OnBtn_AddClient_Click(object sender, RoutedEventArgs e)
         {
             m_controller.AddClientWindow();
         }
+
+
     }
 }
