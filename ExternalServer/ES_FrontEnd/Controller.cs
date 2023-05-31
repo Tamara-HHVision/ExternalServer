@@ -89,9 +89,13 @@ namespace ES_FrontEnd
 
         public void CreateNewClient(string _ip, int _commandPort, int _dataPort)
         {
+            int maxClients = 6;
             UC_ClientListItem uc_ClientListItem = new UC_ClientListItem(_ip, _commandPort, _dataPort);
 
-            uc_client.Wrp_ClientList.Children.Add(uc_ClientListItem);
+            if (uc_client.Wrp_ClientList.Children.Count < maxClients)
+                uc_client.Wrp_ClientList.Children.Add(uc_ClientListItem);
+            else
+                MessageBox.Show("Maximum number of Clients exceeded!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
         }
 
