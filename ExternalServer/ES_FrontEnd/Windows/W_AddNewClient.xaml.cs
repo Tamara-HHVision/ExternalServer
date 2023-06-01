@@ -31,7 +31,6 @@ namespace ES_FrontEnd.Windows
             m_controller.CloseAddClientWindow(this);
         }
 
-
         #region --- User Input ---
 
         private void OnTxtBx_ClientIP_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
@@ -55,5 +54,19 @@ namespace ES_FrontEnd.Windows
             m_clientDataPort = tmpValue;
         }
         #endregion
+
+        private void ToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+            //MyComboBox.IsDropDownOpen = !MyComboBox.IsDropDownOpen;
+
+            Popup.IsOpen = !Popup.IsOpen;
+        }
+
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
