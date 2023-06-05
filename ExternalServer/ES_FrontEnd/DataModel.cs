@@ -1,6 +1,6 @@
 ﻿namespace ES_FrontEnd
 {
-    class Model
+    class DataModel
     {
     }
 }
