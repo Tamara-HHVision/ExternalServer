@@ -15,7 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Icons\Icn_Pedestrian.png" />
     <None Remove="Resources\Icons\Icn_Settings.png" />
+    <None Remove="Resources\Icons\Icn_Ship.png" />
+    <None Remove="Resources\Icons\Icn_VR.png" />
     <None Remove="Resources\Images\Btn_Blizzard.png" />
     <None Remove="Resources\Images\Btn_Cancel.png" />
     <None Remove="Resources\Images\Btn_ClearSky.png" />
@@ -40,7 +43,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Icons\Icn_Pedestrian.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Icons\Icn_Settings.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Icons\Icn_Ship.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Icons\Icn_VR.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Images\Btn_Blizzard.png">

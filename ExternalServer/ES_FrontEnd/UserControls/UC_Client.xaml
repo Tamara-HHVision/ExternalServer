@@ -11,7 +11,7 @@
     <Grid Width="1440" Height="945">
         <Grid.RowDefinitions>
             <RowDefinition Height="160"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="785"/>
         </Grid.RowDefinitions>
         
         
@@ -23,7 +23,7 @@
         
         
         <Grid Grid.Row="1">
-            <WrapPanel x:Name="Wrp_ClientList" Margin="316 157">
+            <WrapPanel x:Name="Wrp_ClientList" Margin="100 10 100 100">
                 
             </WrapPanel>    
         </Grid>

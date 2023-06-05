@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
+﻿using System.Windows.Controls;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ES_FrontEnd.UserControls
 {
@@ -20,9 +8,41 @@ namespace ES_FrontEnd.UserControls
     /// </summary>
     public partial class UC_ClientListItem : UserControl
     {
-        public UC_ClientListItem()
+        public UC_ClientListItem(string _ip, int _commandPort, int _dataPort, EClientType _clientType)
         {
             InitializeComponent();
+
+            Lbl_ClientIP.Content = _ip;
+            Lbl_ClientCommandPort.Content = _commandPort;
+            Lbl_ClientDataPort.Content = _dataPort;
+            Lbl_ClientType.Content = _clientType.ToString();
+
+            CheckClientType(_clientType);
+        }
+
+        private void CheckClientType(EClientType _clientType)
+        {
+            switch (_clientType)
+            {
+                case EClientType.VESSEL:
+                    Img_ClientType.Source = new BitmapImage(new System.Uri("pack://application:,,,/ES_FrontEnd;component/Resources/Icons/Icn_Ship.png"));
+                    break;
+
+                case EClientType.PEDESTRIAN:
+                    Img_ClientType.Source = new BitmapImage(new System.Uri("pack://application:,,,/ES_FrontEnd;component/Resources/Icons/Icn_Pedestrian.png"));
+                    break;
+
+                case EClientType.VR:
+                    Img_ClientType.Source = new BitmapImage(new System.Uri("pack://application:,,,/ES_FrontEnd;component/Resources/Icons/Icn_VR.png"));
+                    break;
+
+                case EClientType.OPENSCENARIO:
+                    Img_ClientType.Source = new BitmapImage(new System.Uri("pack://application:,,,/ES_FrontEnd;component/Resources/Icons/Icn_Ship.png"));
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 }
