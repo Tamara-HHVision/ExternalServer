@@ -12,6 +12,7 @@ namespace ES_FrontEnd.Windows
         private string m_clientIP = "127.0.0.1";
         private int m_clientCommandPort;
         private int m_clientDataPort;
+        private EClientType m_clientType;
 
 
         public W_AddNewClient(Controller _controller)
@@ -27,7 +28,7 @@ namespace ES_FrontEnd.Windows
 
         private void OnBtn_SaveClient_Click(object sender, RoutedEventArgs e)
         {
-            m_controller.CreateNewClient(m_clientIP, m_clientCommandPort, m_clientDataPort);
+            m_controller.CreateNewClient(m_clientIP, m_clientCommandPort, m_clientDataPort, m_clientType);
             m_controller.CloseAddClientWindow(this);
         }
 
@@ -53,20 +54,39 @@ namespace ES_FrontEnd.Windows
 
             m_clientDataPort = tmpValue;
         }
+
+        private void OnBtn_ShipType_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButton.Content = "Ship";
+            m_clientType = EClientType.VESSEL;
+            Ppp_ClientType.IsOpen = !Ppp_ClientType.IsOpen;
+        }
+
+        private void OnBtn_PedestrianType_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButton.Content = "Pedestrian";
+            m_clientType = EClientType.PEDESTRIAN;
+            Ppp_ClientType.IsOpen = !Ppp_ClientType.IsOpen;
+
+        }
+
+        private void OnBtn_VRType_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButton.Content = "VR";
+            m_clientType |= EClientType.VR;
+            Ppp_ClientType.IsOpen = !Ppp_ClientType.IsOpen;
+
+        }
         #endregion
+
 
         private void ToggleButton_Click(object sender, RoutedEventArgs e)
         {
             //MyComboBox.IsDropDownOpen = !MyComboBox.IsDropDownOpen;
 
-            Popup.IsOpen = !Popup.IsOpen;
+            Ppp_ClientType.IsOpen = !Ppp_ClientType.IsOpen;
         }
 
 
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

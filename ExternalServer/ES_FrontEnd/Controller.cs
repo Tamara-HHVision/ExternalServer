@@ -7,7 +7,7 @@ namespace ES_FrontEnd
     public class Controller
     {
         private MainWindow m_view;
-        private Model m_model;
+        private DataModel m_model;
 
         private W_AddNewClient? m_newClientWindow = null;
 
@@ -18,7 +18,7 @@ namespace ES_FrontEnd
 
         public Controller(MainWindow _view)
         {
-            m_model = new Model();
+            m_model = new DataModel();
             m_view = _view;
 
             uc_scenario = new UC_Scenario(this);
@@ -87,10 +87,10 @@ namespace ES_FrontEnd
             m_newClientWindow = null;
         }
 
-        public void CreateNewClient(string _ip, int _commandPort, int _dataPort)
+        public void CreateNewClient(string _ip, int _commandPort, int _dataPort, EClientType _clientType)
         {
             int maxClients = 6;
-            UC_ClientListItem uc_ClientListItem = new UC_ClientListItem(_ip, _commandPort, _dataPort);
+            UC_ClientListItem uc_ClientListItem = new UC_ClientListItem(_ip, _commandPort, _dataPort, _clientType);
 
             if (uc_client.Wrp_ClientList.Children.Count < maxClients)
                 uc_client.Wrp_ClientList.Children.Add(uc_ClientListItem);

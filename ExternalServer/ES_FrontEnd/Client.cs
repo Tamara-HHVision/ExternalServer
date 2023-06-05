@@ -3,6 +3,8 @@
     public enum EClientType
     {
         VESSEL,
+        PEDESTRIAN,
+        VR,
         OPENSCENARIO,
     }
 
