@@ -99,5 +99,10 @@ namespace ES_FrontEnd
 
         }
 
+        public void GetServerPorts(int _serverDataPort, int _serverCommandPort)
+        {
+            m_model.GetServerPorts(_serverDataPort, _serverCommandPort);
+        }
+
     }
 }

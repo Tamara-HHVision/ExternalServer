@@ -15,12 +15,20 @@
         BLIZZARD
     }
 
-    class ScenarioConfiguration
+    public class ScenarioConfiguration
     {
-        private int m_serverCommandPort;
-        private int m_serverDataPort;
-        private int m_time;
+        public int ServerCommandPort { get; set; }
+        public int ServerDataPort { get; set; }
+        public int Time { get; set; }
 
-        private EWeatherSetting m_weatherSetting;
+        public EWeatherSetting WeatherSetting { get; set; }
+
+        public ScenarioConfiguration(int _serverCommandPort, int _serverDataPort, int _time, EWeatherSetting _weatherSetting)
+        {
+            ServerCommandPort = _serverCommandPort;
+            ServerDataPort = _serverDataPort;
+            Time = _time;
+            WeatherSetting = _weatherSetting;
+        }
     }
 }
