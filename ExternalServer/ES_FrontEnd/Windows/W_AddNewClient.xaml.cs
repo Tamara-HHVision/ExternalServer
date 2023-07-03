@@ -44,7 +44,7 @@ namespace ES_FrontEnd.Windows
             int tmpValue;
             bool success = int.TryParse(TxtBx_ClientCommandPort.Text, out tmpValue);
 
-            m_clientCommandPort = tmpValue; ;
+            m_clientCommandPort = tmpValue;
         }
 
         private void OnTxtBx_ClientDataPort_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
@@ -86,7 +86,6 @@ namespace ES_FrontEnd.Windows
 
             Ppp_ClientType.IsOpen = !Ppp_ClientType.IsOpen;
         }
-
 
     }
 }

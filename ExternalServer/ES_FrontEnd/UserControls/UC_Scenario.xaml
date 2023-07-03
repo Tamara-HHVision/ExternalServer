@@ -58,20 +58,20 @@
                 <Label Style="{StaticResource InputLabel}" Content="Server Data Port"    Margin="24 24 669 175"/>
                 <Label Style="{StaticResource InputLabel}" Content="Server Command Port" Margin="416 24 235 175"/>
 
-                <TextBox Style="{StaticResource UserInput}" Margin="24 47 416 123"/>
-                <TextBox Style="{StaticResource UserInput}" Margin="416 47 24 123"/>
+                <TextBox x:Name="TxtBx_ServerDataPort" Style="{StaticResource UserInput}" Margin="24 47 416 123" TextChanged="OnTxtBx_ServerDataPort_TextChanged"/>
+                <TextBox x:Name="TxtBx_ServerCommandPort" Style="{StaticResource UserInput}" Margin="416 47 24 123" TextChanged="OnTxtBx_ServerCommandPort_TextChanged"/>
 
-                <Button Style="{StaticResource Buttons}" Margin="279 148 279 24" Padding="-0 -7 0 0" VerticalContentAlignment="Center">
+                <Button x:Name="Btn_SaveConfig" Style="{StaticResource Buttons}" Margin="279 148 279 24" Padding="-0 -7 0 0" VerticalContentAlignment="Center" Click="OnBtn_SaveConfig_Click">
                     <Image Width="auto" Height="60" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_SaveConfig.png"/>
                 </Button>
             </Canvas>
 
             <StackPanel Orientation="Horizontal" Margin="458 250 458 108">
-                <Button Style="{StaticResource Buttons}">
+                <Button x:Name="Btn_StartScenario" Style="{StaticResource Buttons}" Click="OnBtn_StartScenario_Click">
                     <Image Height="60" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_StartScenario.png"/>
                 </Button>
 
-                <Button Style="{StaticResource Buttons}" Margin="20 0 0 0" >
+                <Button x:Name="StopScenario" Style="{StaticResource Buttons}" Margin="20 0 0 0" Click="OnStopScenario_Click">
                     <Image Height="60" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_StopScenario.png"/>
                 </Button>
             </StackPanel>

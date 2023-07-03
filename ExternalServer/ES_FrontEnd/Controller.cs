@@ -6,6 +6,13 @@ namespace ES_FrontEnd
 {
     public class Controller
     {
+        //public static string FileName = "config.json";
+        //public static string BaseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+        //public static string FilePath = Path.Combine(BaseDirectory, FileName);
+
+        public static string jsonPath = System.AppDomain.CurrentDomain.BaseDirectory + @"/config.json";
+
+
         private MainWindow m_view;
         private DataModel m_model;
 
@@ -97,7 +104,22 @@ namespace ES_FrontEnd
             else
                 MessageBox.Show("Maximum number of Clients exceeded!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
 
+            m_model.CreateClient(_ip, _commandPort, _dataPort, _clientType);
         }
 
+        public void GetServerPorts(int _serverDataPort, int _serverCommandPort)
+        {
+            m_model.GetServerPorts(_serverDataPort, _serverCommandPort);
+        }
+
+        public void GetWeatherSetting(EWeatherSetting _weather)
+        {
+            m_model.GetWeatherSetting(_weather);
+        }
+
+        public void SaveConfiguration()
+        {
+            m_model.SaveConfigToJson(jsonPath);
+        }
     }
 }
