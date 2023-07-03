@@ -23,12 +23,12 @@
 
         public EWeatherSetting WeatherSetting { get; set; }
 
-        public ScenarioConfiguration(int _serverCommandPort, int _serverDataPort, int _time, EWeatherSetting _weatherSetting)
+        public ScenarioConfiguration(/*int _serverCommandPort, int _serverDataPort, int _time, EWeatherSetting _weatherSetting*/)
         {
-            ServerCommandPort = _serverCommandPort;
-            ServerDataPort = _serverDataPort;
-            Time = _time;
-            WeatherSetting = _weatherSetting;
+            //ServerCommandPort = _serverCommandPort;
+            //ServerDataPort = _serverDataPort;
+            //Time = _time;
+            //WeatherSetting = _weatherSetting;
         }
     }
 }

@@ -21,6 +21,8 @@ namespace ES_FrontEnd.UserControls
         private void OnBtn_SaveConfig_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             m_controller.GetServerPorts(m_serverDataPort, m_serverCommandPort);
+
+            m_controller.SaveConfiguration();
         }
 
         private void OnBtn_StartScenario_Click(object sender, System.Windows.RoutedEventArgs e)

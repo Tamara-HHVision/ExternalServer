@@ -1,16 +1,17 @@
-﻿namespace ES_FrontEnd
+﻿using System.Collections.Generic;
+
+namespace ES_FrontEnd
 {
     public class DataModel
     {
-        private Client m_client;
-        private ScenarioConfiguration m_scenarioConfiguration;
+        private List<Client> m_clients = new List<Client>();
 
-        public Client Client => m_client;
+        private ScenarioConfiguration m_scenarioConfiguration = new ScenarioConfiguration();
+
+        public List<Client> Clients => m_clients;
         public ScenarioConfiguration ScenarioConfiguration => m_scenarioConfiguration;
 
         private int m_trackedClientID = 0;
-        private int m_serverDataPort;
-        private int m_serverCommandPort;
 
 
         public Client CreateClient(string _ip, int _commandPort, int _dataPort, EClientType _clientType)
@@ -22,21 +23,23 @@
 
             // create client and return it
             Client client = new Client(newClientID, _ip, _commandPort, _dataPort, _clientType);
+            m_clients.Add(client);
             return client;
         }
 
 
         public void GetServerPorts(int _serverDataPort, int _serverCommandPort)
         {
-            m_serverDataPort = _serverDataPort;
-            m_serverCommandPort = _serverCommandPort;
+            ScenarioConfiguration.ServerDataPort = _serverDataPort;
+            ScenarioConfiguration.ServerCommandPort = _serverCommandPort;
         }
 
 
-        public void SaveConfigToJson()
+        public void SaveConfigToJson(string _path)
         {
             ConfigExporter configExporter = new ConfigExporter(this);
-            configExporter.ExportConfig("");
+            configExporter.ExportConfig(_path);
         }
+
     }
 }
