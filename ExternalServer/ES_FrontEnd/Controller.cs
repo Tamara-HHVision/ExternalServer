@@ -112,6 +112,11 @@ namespace ES_FrontEnd
             m_model.GetServerPorts(_serverDataPort, _serverCommandPort);
         }
 
+        public void GetWeatherSetting(EWeatherSetting _weather)
+        {
+            m_model.GetWeatherSetting(_weather);
+        }
+
         public void SaveConfiguration()
         {
             m_model.SaveConfigToJson(jsonPath);

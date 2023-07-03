@@ -23,47 +23,47 @@
         
         <!--#region ___ Weather Buttons ___-->
         <WrapPanel Margin="250 150 250 500">
-            <Button Style="{StaticResource WeatherButton}">
+            <Button x:Name="Btn_ClearSky" Style="{StaticResource WeatherButton}" Click="OnBtn_ChooseWeather_Click">
                 <Image Height="70" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_ClearSky.png"/>
             </Button>
 
-            <Button Style="{StaticResource WeatherButton}">
+            <Button x:Name="Btn_PartlyCloudy" Style="{StaticResource WeatherButton}" Click="OnBtn_ChooseWeather_Click">
                 <Image Height="70" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_PartlyCloudy.png"/>
             </Button>
 
-            <Button Style="{StaticResource WeatherButton}">
+            <Button x:Name="Btn_Cloudy" Style="{StaticResource WeatherButton}" Click="OnBtn_ChooseWeather_Click">
                 <Image Height="70" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Cloudy.png"/>
             </Button>
 
-            <Button Style="{StaticResource WeatherButton}">
+            <Button x:Name="Btn_Overcast" Style="{StaticResource WeatherButton}" Click="OnBtn_ChooseWeather_Click">
                 <Image Height="70" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Overcast.png"/>
             </Button>
 
-            <Button Style="{StaticResource WeatherButton}">
+            <Button x:Name="Btn_Foggy" Style="{StaticResource WeatherButton}" Click="OnBtn_ChooseWeather_Click">
                 <Image Height="70" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Foggy.png"/>
             </Button>
 
-            <Button Style="{StaticResource WeatherButton}">
+            <Button x:Name="Btn_LightRain" Style="{StaticResource WeatherButton}" Click="OnBtn_ChooseWeather_Click">
                 <Image Height="70" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_LightRain.png"/>
             </Button>
 
-            <Button Style="{StaticResource WeatherButton}">
+            <Button x:Name="Btn_Rain" Style="{StaticResource WeatherButton}" Click="OnBtn_ChooseWeather_Click">
                 <Image Height="70" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Rain.png"/>
             </Button>
 
-            <Button Style="{StaticResource WeatherButton}">
+            <Button x:Name="Btn_Thunderstorm" Style="{StaticResource WeatherButton}" Click="OnBtn_ChooseWeather_Click">
                 <Image Height="70" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Thunderstorm.png"/>
             </Button>
 
-            <Button Style="{StaticResource WeatherButton}">
+            <Button x:Name="Btn_LightSnow" Style="{StaticResource WeatherButton}" Click="OnBtn_ChooseWeather_Click">
                 <Image Height="70" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_LightSnow.png"/>
             </Button>
 
-            <Button Style="{StaticResource WeatherButton}">
+            <Button x:Name="Btn_Snow" Style="{StaticResource WeatherButton}" Click="OnBtn_ChooseWeather_Click">
                 <Image Height="70" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Snow.png"/>
             </Button>
 
-            <Button Style="{StaticResource WeatherButton}">
+            <Button x:Name="Btn_Blizzard" Style="{StaticResource WeatherButton}" Click="OnBtn_ChooseWeather_Click">
                 <Image Height="70" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Blizzard.png"/>
             </Button>
 
@@ -77,7 +77,7 @@
                 <Image Height="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Cancel.png"/>
             </Button>
 
-            <Button Height="auto" Width="250" Background="Transparent" BorderBrush="Transparent" Margin="25 0 0 0">
+            <Button x:Name="Btn_SaveWeather" Height="auto" Width="250" Background="Transparent" BorderBrush="Transparent" Margin="25 0 0 0" Click="OnBtn_SaveWeather_Click">
                 <Image Height="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Save.png"/>
             </Button>
         </StackPanel>
