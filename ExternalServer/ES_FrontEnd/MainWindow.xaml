@@ -15,6 +15,28 @@
             <Setter Property="Height" Value="55"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderBrush" Value="Transparent"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1,1,1,0"
+                            CornerRadius="25,25,0,0"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="BorderBrush" Value="#FA9600" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                        
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
         </Style>
     </Window.Resources>
 
@@ -26,7 +48,7 @@
 
         
         <!--#region UPPER SECTION: TabControll & Logo -->
-        <Grid Grid.Row="0">              <!--TabControl-->
+        <Grid Grid.Row="0" Background="#111">              <!--TabControl-->
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="114"/>     <!--Project Logo-->
@@ -39,19 +61,19 @@
             <!--#region __Tab Control Items___-->
             <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="366 23 0 0">            <!--Button Order-->
                 <Button x:Name="Btn_ScenarioControl" Style="{StaticResource TabControlButton}" Click="OnBtn_ScenarioControl_Click">
-                    <Image Height="55" Width="auto"  Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ScenarioTab.png"/>
+                    <Image Height="55" Width="200"  Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ScenarioTab.png"/>
                 </Button>
 
                 <Button x:Name="Btn_ClientSettings" Style="{StaticResource TabControlButton}" Click="OnBtn_ClientSettings_Click">
-                    <Image Height="55" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ClientTab.png"/>
+                    <Image Height="55" Width="200" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ClientTab.png"/>
                 </Button>
 
                 <Button x:Name="Btn_WeatherSettings" Style="{StaticResource TabControlButton}" Click="OnBtn_WeatherSettings_Click">
-                    <Image Height="55" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/WeatherTab.png"/>
+                    <Image Height="55" Width="200" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/WeatherTab.png"/>
                 </Button>
 
                 <Button x:Name="Btn_ShipSettings" Style="{StaticResource TabControlButton}" Click="OnBtn_ShipSettings_Click">
-                    <Image Height="55" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ShipTab.png"/>
+                    <Image Height="55" Width="200" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ShipTab.png"/>
                 </Button>
             </StackPanel>
             <!--#endregion-->
