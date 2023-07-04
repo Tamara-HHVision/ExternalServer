@@ -73,7 +73,7 @@
                 </Button>
 
                 <Button x:Name="Btn_ShipSettings" Style="{StaticResource TabControlButton}" Click="OnBtn_ShipSettings_Click">
-                    <Image Height="55" Width="200" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ShipTab.png"/>
+                    <Image Height="50" Width="200" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/ShipTab.png"/>
                 </Button>
             </StackPanel>
             <!--#endregion-->
