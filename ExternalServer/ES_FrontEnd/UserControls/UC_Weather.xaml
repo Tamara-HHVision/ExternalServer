@@ -105,7 +105,7 @@
         
         <!--#region ___ Cancel & Save Buttons___-->
         <StackPanel Orientation="Horizontal" Margin="450,480,450,400">
-            <Button Style="{StaticResource Buttons}">
+            <Button x:Name="Btn_CancelWeather" Style="{StaticResource Buttons}" Click="OnBtn_CancelWeather_Click">
                 <Image Width="250" Height="50" Margin="0 -5 0 0" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Cancel.png"/>
             </Button>
 

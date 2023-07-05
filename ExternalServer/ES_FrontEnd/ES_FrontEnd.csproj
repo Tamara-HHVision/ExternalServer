@@ -32,14 +32,24 @@
     <None Remove="Resources\Images\Btn_Save.png" />
     <None Remove="Resources\Images\Btn_SaveConfig.png" />
     <None Remove="Resources\Images\Btn_Snow.png" />
+    <None Remove="Resources\Images\Btn_StartScenario.png" />
+    <None Remove="Resources\Images\Btn_StopScenario.png" />
     <None Remove="Resources\Images\Btn_Thunderstorm.png" />
     <None Remove="Resources\Images\ClientTab.png" />
     <None Remove="Resources\Images\ScenarioTab.png" />
     <None Remove="Resources\Images\ShipTab.png" />
     <None Remove="Resources\Images\WeatherTab.png" />
+    <None Remove="Resources\Images\_ClientTab.png" />
+    <None Remove="Resources\Images\_ScenarioTab.png" />
+    <None Remove="Resources\Images\_ShipTab.png" />
+    <None Remove="Resources\Images\_WeatherTab.png" />
     <None Remove="Resources\Logo\Foerde5G_col_Logo.png" />
     <None Remove="Resources\Logo\Foerde5G_Logo.png" />
     <None Remove="Resources\Logo\HHVision_Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
   <ItemGroup>
@@ -99,6 +109,12 @@
     <Resource Include="Resources\Images\Btn_Snow.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Images\Btn_StartScenario.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\Btn_StopScenario.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Images\Btn_Thunderstorm.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -112,6 +128,18 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Images\WeatherTab.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\_ClientTab.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\_ScenarioTab.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\_ShipTab.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Images\_WeatherTab.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Logo\Foerde5G_col_Logo.png">

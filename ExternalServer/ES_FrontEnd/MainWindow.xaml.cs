@@ -11,7 +11,7 @@ namespace ES_FrontEnd
     {
         private Controller m_controller;
 
-        private Button m_lastPressedButton;
+        private Button? m_lastPressedButton = null;
 
         public MainWindow()
         {

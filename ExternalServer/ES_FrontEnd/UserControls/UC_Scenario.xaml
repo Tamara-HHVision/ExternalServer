@@ -90,12 +90,12 @@
             </Canvas>
 
             <StackPanel Orientation="Horizontal" Margin="458 250 458 108">
-                <Button x:Name="Btn_StartScenario" Style="{StaticResource ScenarioButtons}" Click="OnBtn_StartScenario_Click">
-                    <Image Height="50" Width="250" Margin="0 -5 0 0" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_StartScenario.png"/>
+                <Button x:Name="Btn_StartScenario" Style="{StaticResource ScenarioButtons}" Click="OnBtn_StartScenario_Click" Padding="-0 -50 0 0" VerticalContentAlignment="Center">
+                    <Image Width="250" Height="50" Margin="0 -5 0 0" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_StartScenario.png"/>
                 </Button>
 
-                <Button x:Name="StopScenario" Style="{StaticResource ScenarioButtons}" Margin="20 0 0 0" Click="OnStopScenario_Click">
-                    <Image Height="50" Width="250" Margin="0 -5 0 0" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_StopScenario.png"/>
+                <Button x:Name="StopScenario" Style="{StaticResource ScenarioButtons}" Margin="20 0 0 0" Click="OnStopScenario_Click" Padding="-0 -50 0 0" VerticalContentAlignment="Center">
+                    <Image Width="250" Height="50" Margin="0 -5 0 0" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_StopScenario.png"/>
                 </Button>
             </StackPanel>
 

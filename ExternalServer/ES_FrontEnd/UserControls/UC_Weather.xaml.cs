@@ -78,19 +78,24 @@ namespace ES_FrontEnd.UserControls
                 }
             }
 
-
+            // check if the clicked button is the currently selected button
             if (clickedButton == m_selectedButton)
             {
+                // deselect the button
                 m_selectedButton = null;
+                // visual cue: remove border
                 clickedButton.BorderBrush = Brushes.Transparent;
             }
             else
             {
+                // deselect the previously selected button 
                 if (m_selectedButton != null)
                 {
+                    // remove Border
                     m_selectedButton.BorderBrush = Brushes.Transparent;
                 }
 
+                // select the clicked button
                 m_selectedButton = clickedButton;
             }
 
@@ -103,6 +108,14 @@ namespace ES_FrontEnd.UserControls
             m_controller.GetWeatherSetting(m_weather);
 
             m_controller.SaveConfiguration();
+        }
+
+        private void OnBtn_CancelWeather_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            m_selectedButton.BorderBrush = Brushes.Transparent;
+            m_selectedButton = null;
+
+            m_weather = 0;
         }
     }
 }
