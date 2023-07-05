@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2022
+# Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ES_FrontEnd", "ES_FrontEnd\ES_FrontEnd.csproj", "{2B0829BC-200A-41D8-9DC7-3D545F0AF7CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ES_FrontEnd", "ES_FrontEnd\ES_FrontEnd.csproj", "{2B0829BC-200A-41D8-9DC7-3D545F0AF7CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B2B9DA60-A76D-49B2-9331-6F2E109C4DED}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

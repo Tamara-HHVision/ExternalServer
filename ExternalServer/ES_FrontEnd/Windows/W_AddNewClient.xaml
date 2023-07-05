@@ -49,6 +49,29 @@
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Padding" Value="0 -7 0 0"/>
             <Setter Property="BorderBrush" Value="Transparent"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="25,25,25,25"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FA9600" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#2D2D2D" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
         </Style>
 
         <Style x:Key="DropDownButtons" TargetType="Button">
@@ -186,11 +209,11 @@
 
         <StackPanel Orientation="Horizontal" Margin="113 289 113 24">
             <Button Style="{StaticResource Buttons}" Click="OnBtn_CloseClientWindow_Click">
-                <Image Height="60" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Cancel.png"/>
+                <Image Width="250" Height="50" Margin="0 -5 0 0" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Cancel.png"/>
             </Button>
 
             <Button x:Name="Btn_SaveClient" Style="{StaticResource Buttons}" Margin="20 0 0 0" Click="OnBtn_SaveClient_Click">
-                <Image Height="60" Width="auto" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Save.png"/>
+                <Image Width="250" Height="50" Margin="0 -5 0 0" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Save.png"/>
             </Button>
         </StackPanel>
 
