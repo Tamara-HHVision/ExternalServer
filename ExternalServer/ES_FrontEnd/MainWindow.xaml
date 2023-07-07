@@ -32,7 +32,6 @@
                                 <Setter Property="BorderBrush" Value="#FA9600" />
                             </Trigger>
                         </ControlTemplate.Triggers>
-                        
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -82,7 +81,7 @@
         <!--#endregion-->
 
         
-        <Grid Grid.Row="1">
+        <Grid x:Name="Grd_View" Grid.Row="1">
             <Canvas x:Name="Cnvs_MainView" HorizontalAlignment="Left" VerticalAlignment="Top">
                 
             </Canvas>
@@ -90,6 +89,14 @@
             <!--HHV Branding Logo-->
             <Image Height="15" Width="157" Margin="1200 850 0 0" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Logo/HHVision_Logo.png"/>
 
+            <Label x:Name="Lbl_Status" Height="40" Width="400" 
+                   Background="#042506" Foreground="White"
+                   FontSize="12" FontFamily="Montserrat" FontWeight="SemiBold"
+                   HorizontalContentAlignment="Center"
+                   VerticalContentAlignment="Center"
+                   Content="Test" Margin="50,800,990,50" Visibility="Hidden"/>
+            
+            
         </Grid>
         
 

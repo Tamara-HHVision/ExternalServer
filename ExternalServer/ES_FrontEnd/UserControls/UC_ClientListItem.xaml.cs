@@ -24,6 +24,8 @@ namespace ES_FrontEnd.UserControls
 
             CheckClientType(_clientType);
             Lbl_ClientID.Content = $"Client {_id}";
+
+            Status.Log($"Client {_id} Added!");
         }
 
         private void CheckClientType(EClientType _clientType)

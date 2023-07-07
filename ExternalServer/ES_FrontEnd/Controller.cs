@@ -30,6 +30,8 @@ namespace ES_FrontEnd
             m_model = new DataModel();
             m_view = _view;
 
+            Status.Init(m_view.Lbl_Status);
+
             m_uc_scenario = new UC_Scenario(this);
             m_uc_client = new UC_Client(this);
             m_uc_weather = new UC_Weather(this);
