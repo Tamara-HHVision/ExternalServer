@@ -23,6 +23,7 @@ namespace ES_FrontEnd.UserControls
             Lbl_ClientType.Content = _clientType.ToString();
 
             CheckClientType(_clientType);
+            Lbl_ClientID.Content = $"Client {_id}";
         }
 
         private void CheckClientType(EClientType _clientType)
