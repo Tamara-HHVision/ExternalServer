@@ -89,7 +89,7 @@
     </Window.Resources>
 
     <Grid Background="#1D1D1D" Height="357" Width="750" VerticalAlignment="Top">
-        <Label Margin="303 24 302 311" Content="Add New Client" FontFamily="Montserrat" FontSize="18" Foreground="#FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="-5"/>
+        <Label x:Name="Lbl_WindowTitle" Margin="303 24 302 311" Content="Add New Client" FontFamily="Montserrat" FontSize="18" Foreground="#FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="-5"/>
 
         <Button x:Name="Btn_CloseClientWindow" Margin="710 24 24 317" Content="X" FontSize="20" Padding="0 -7 0 0" FontWeight="Bold" Foreground="#B7B7B7" Background="Transparent" BorderBrush="Transparent" Click="OnBtn_CloseClientWindow_Click"/>
 
@@ -114,98 +114,6 @@
             </StackPanel>
         </Popup>
         
-        
-
-        <!--#region ___Old ComboBox Approach___ -->
-        <!--<ComboBox x:Name="MyComboBox" Text="5555" Margin="386 195 26 116" BorderBrush="Transparent" IsEnabled="True">
-            
-            -->
-        <!--ComboBox Styling to get the custom look-->
-        <!--
-            <ComboBox.Style>
-                <Style TargetType="ComboBox" BasedOn="{StaticResource InputType}">
-                    <Setter Property="Background" Value="#2D2D2D" />
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="ComboBox">
-                                <Grid>
-                                    <ToggleButton x:Name="ToggleButton" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" Focusable="False" Click="ToggleButton_Click">
-                                        <ContentPresenter />
-                                    </ToggleButton>
-                                    <Popup x:Name="Popup" IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}" Placement="Bottom" AllowsTransparency="True" Focusable="False" PlacementTarget="{Binding ElementName=ToggleButton}">
-                                        <Grid Background="#2D2D2D">
-                                            <Border x:Name="DropDownBorder" Background="Transparent" Width="338">
-                                                <ScrollViewer x:Name="ScrollViewer" VerticalScrollBarVisibility="Auto" Height="150" Width="Auto">
-                                                    <StackPanel IsItemsHost="True">
-                                                        <StackPanel.Resources>
-                                                            <DataTemplate DataType="{x:Type local:ComboBoxItemData}">
-                                                                <StackPanel Orientation="Horizontal">
-                                                                    <Image Source="{Binding ImagePath}" Width="15" Height="25" Margin="0 0 5 0"/>
-                                                                    <TextBlock Text="{Binding Text}" />
-                                                                </StackPanel>
-                                                            </DataTemplate>
-                                                        </StackPanel.Resources>
-                                                    </StackPanel>
-                                                </ScrollViewer>
-                                            </Border>
-                                        </Grid>
-                                    </Popup>
-                                </Grid>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </ComboBox.Style>
-            
-            <ComboBox.ItemContainerStyle>
-                <Style TargetType="ComboBoxItem">
-                    <Setter Property="MinWidth" Value="338"/>
-                    <Setter Property="MinHeight" Value="46"/>
-                    <Setter Property="Padding" Value="5"/>
-                    <Setter Property="Foreground" Value="#848484"/>
-                    <Setter Property="FontFamily" Value="Poppins"/>
-                    <Setter Property="FontSize" Value="14"/>
-                    <Setter Property="FontWeight" Value="Bold"/>
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="ComboBoxItem">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
-
-                                    <Image Source="{Binding ImageSource}" Width="20" Height="20" Margin="5 1 0 5"/>
-                                    <ContentPresenter Grid.Column="1" VerticalAlignment="Center" Margin="5 0 0 0"/>
-                                </Grid>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </ComboBox.ItemContainerStyle>
-
-            <ComboBox.ItemTemplate>
-            <DataTemplate>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="{Binding ImagePath}" Width="15" Height="25" Margin="0 0 5 0"/>
-                    <TextBlock Text="{Binding Text}" />
-                </StackPanel>
-            </DataTemplate>
-            </ComboBox.ItemTemplate>
-
-            <ComboBox.ItemsSource>
-                <x:Array Type="{x:Type local:ComboBoxItemData}">
-                    <local:ComboBoxItemData Text="Ship" ImagePath="pack://application:,,,/ES_FrontEnd;component/Resources/Icons/Icn_Ship.png"/>
-                    <local:ComboBoxItemData Text="Pedestrian" ImagePath="pack://application:,,,/ES_FrontEnd;component/Resources/Icons/Icn_Pedestrian.png"/>
-                    <local:ComboBoxItemData Text="VR" ImagePath="pack://application:,,,/ES_FrontEnd;component/Resources/Icons/Icn_VR.png"/>
-                </x:Array>
-            </ComboBox.ItemsSource>
-
-
-        </ComboBox>-->
-        <!--#endregion-->
-
-
 
         <StackPanel Orientation="Horizontal" Margin="113 289 113 24">
             <Button Style="{StaticResource Buttons}" Click="OnBtn_CloseClientWindow_Click">

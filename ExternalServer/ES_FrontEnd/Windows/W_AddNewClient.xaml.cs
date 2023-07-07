@@ -7,6 +7,8 @@ namespace ES_FrontEnd.Windows
     /// </summary>
     public partial class W_AddNewClient : Window
     {
+        private bool m_isEditMode = false;
+
         private Controller m_controller;
 
         private string m_clientIP = "127.0.0.1";
@@ -14,11 +16,39 @@ namespace ES_FrontEnd.Windows
         private int m_clientDataPort;
         private EClientType m_clientType;
 
+        private Client m_client;
 
+        /// <summary>
+        /// Normal Constuctor
+        /// </summary>
+        /// <param name="_controller"> needs the controller reference, since that one handles everything </param>
         public W_AddNewClient(Controller _controller)
         {
             InitializeComponent();
             m_controller = _controller;
+        }
+
+
+        /// <summary>
+        /// Constructor for changing a Client that was already set up
+        /// </summary>
+        /// <param name="_controller"> controller reference bc duh </param>
+        /// <param name="_client"> Client reference needed to show the old parameters </param>
+        public W_AddNewClient(Controller _controller, Client _client, bool _isEditMode)
+        {
+            InitializeComponent();
+            m_controller = _controller;
+
+            Lbl_WindowTitle.Content = "Change your Client";
+
+            TxtBx_ClientIP.Text = _client.IP;
+            TxtBx_ClientCommandPort.Text = _client.ClientCommandPort.ToString();
+            TxtBx_ClientDataPort.Text = _client.ClientDataPort.ToString();
+            ToggleButton.Content = _client.ClientType.ToString();
+            m_clientType = _client.ClientType;
+            m_isEditMode = _isEditMode;
+
+            m_client = _client;
         }
 
         private void OnBtn_CloseClientWindow_Click(object sender, RoutedEventArgs e)
@@ -28,7 +58,20 @@ namespace ES_FrontEnd.Windows
 
         private void OnBtn_SaveClient_Click(object sender, RoutedEventArgs e)
         {
-            m_controller.CreateNewClient(m_clientIP, m_clientCommandPort, m_clientDataPort, m_clientType);
+            if (!m_isEditMode)
+            {
+                m_controller.CreateNewClientItem(m_clientIP, m_clientCommandPort, m_clientDataPort, m_clientType);
+            }
+            if (m_isEditMode)
+            {
+                m_client.IP = m_clientIP;
+                m_client.ClientCommandPort = m_clientCommandPort;
+                m_client.ClientDataPort = m_clientDataPort;
+                m_client.ClientType = m_clientType;
+
+                m_controller.OverrideClient(m_client);
+            }
+
             m_controller.CloseAddClientWindow(this);
         }
 
@@ -82,8 +125,6 @@ namespace ES_FrontEnd.Windows
 
         private void ToggleButton_Click(object sender, RoutedEventArgs e)
         {
-            //MyComboBox.IsDropDownOpen = !MyComboBox.IsDropDownOpen;
-
             Ppp_ClientType.IsOpen = !Ppp_ClientType.IsOpen;
         }
 

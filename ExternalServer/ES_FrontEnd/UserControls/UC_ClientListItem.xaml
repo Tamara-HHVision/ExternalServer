@@ -30,7 +30,7 @@
 
         <Label Content="Client ID" FontSize="18" FontFamily="Montserrat" Foreground="#B7B7B7" Padding="-2" Margin="24 24 289 251"/>
 
-        <Button Height="20" Width="20" Margin="348 23 24 254" Background="Transparent" Padding="-1" BorderBrush="Transparent">
+        <Button x:Name="Btn_changeClient" Height="20" Width="20" Margin="348 23 20 254" Background="Transparent" Padding="-1" BorderBrush="Transparent" Click="OnBtn_changeClient_Click">
             <Image  Source="pack://application:,,,/ES_FrontEnd;component/Resources/Icons/Icn_Settings.png"/>
         </Button>
 
