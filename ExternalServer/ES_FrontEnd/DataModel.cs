@@ -14,19 +14,29 @@ namespace ES_FrontEnd
         private int m_trackedClientID = 0;
 
 
-        public Client CreateClient(string _ip, int _commandPort, int _dataPort, EClientType _clientType)
+        public int CreateClient(string _ip, int _commandPort, int _dataPort, EClientType _clientType)
         {
             // Generate new ID for the Client
-            int newClientID = m_trackedClientID++;
+            int newClientID;
+            m_trackedClientID++;
+
+            newClientID = m_trackedClientID;
             //Update counter
             m_trackedClientID = newClientID;
 
             // create client and return it
             Client client = new Client(newClientID, _ip, _commandPort, _dataPort, _clientType);
             m_clients.Add(client);
-            return client;
+            return client.ID;
         }
 
+        public void OverrideClient(Client _client)
+        {
+            m_clients[_client.ID - 1].IP = _client.IP;
+            m_clients[_client.ID - 1].ClientCommandPort = _client.ClientCommandPort;
+            m_clients[_client.ID - 1].ClientDataPort = _client.ClientDataPort;
+            m_clients[_client.ID - 1].ClientType = _client.ClientType;
+        }
 
         public void GetServerPorts(int _serverDataPort, int _serverCommandPort)
         {
