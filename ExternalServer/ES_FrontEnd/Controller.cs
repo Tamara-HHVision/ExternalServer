@@ -185,9 +185,9 @@ namespace ES_FrontEnd
             m_model.GetServerPorts(_serverDataPort, _serverCommandPort);
         }
 
-        public void GetWeatherSetting(EWeatherSetting _weather)
+        public void GetWeatherAndTimeSetting(EWeatherSetting _weather, int _time)
         {
-            m_model.GetWeatherSetting(_weather);
+            m_model.GetWeatherAndTimeSetting(_weather, _time);
         }
 
         public void SaveConfiguration()
