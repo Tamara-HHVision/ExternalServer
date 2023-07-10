@@ -44,9 +44,10 @@ namespace ES_FrontEnd
             ScenarioConfiguration.ServerCommandPort = _serverCommandPort;
         }
 
-        public void GetWeatherSetting(EWeatherSetting _weather)
+        public void GetWeatherAndTimeSetting(EWeatherSetting _weather, int _time)
         {
             ScenarioConfiguration.WeatherSetting = _weather;
+            ScenarioConfiguration.Time = _time;
         }
 
         public void SaveConfigToJson(string _path)

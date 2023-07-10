@@ -16,6 +16,28 @@
             <Setter Property="BorderBrush" Value="Transparent"/>
         </Style>
 
+        <Style x:Key="UserInput" TargetType="TextBox">
+            <Setter Property="Height" Value="46"/>
+            <Setter Property="Width"  Value="80"/>
+            <Setter Property="Background" Value="#2D2D2D"/>
+            <Setter Property="FontFamily" Value="Poppins"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="12"/>
+        </Style>
+
+        <Style x:Key="InputLabel" TargetType="Label">
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Width" Value="115"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="#B7B7B7"/>
+            <Setter Property="Padding" Value="0 5 0 0"/>
+        </Style>
+
         <Style x:Key="Buttons" TargetType="Button">
             <Setter Property="Height" Value="44"/>
             <Setter Property="Width" Value="250"/>
@@ -49,10 +71,10 @@
 
     </UserControl.Resources>
 
-    
-    
+
+
     <Grid Width="1440" Height="945">
-        
+
         <!--#region ___ Weather Buttons ___-->
         <WrapPanel Margin="250 150 250 500">
             <Button x:Name="Btn_ClearSky" Style="{StaticResource WeatherButton}" Click="OnBtn_ChooseWeather_Click">
@@ -102,9 +124,17 @@
         </WrapPanel>
         <!--#endregion-->
 
-        
+        <!--#region ___ Time Setting ___-->
+        <Grid Margin="250,474,250,331">
+            <Label Content="Time" Style="{StaticResource InputLabel}" Margin="380,25,445,90"/>
+            <TextBox x:Name="TxtBx_Hour" Style="{StaticResource UserInput}" Margin="364,55,496,39" TextChanged="OnTxtBx_Hour_TextChanged"/>
+            <TextBox x:Name="TxtBx_Minute" Style="{StaticResource UserInput}" Margin="464,54,396,40" TextChanged="OnTxtBx_Minute_TextChanged"/>
+            <Label Content=":" VerticalContentAlignment="Center" FontSize="50" Foreground="White" Width="20" Margin="444,0,476,0" />
+        </Grid>
+        <!--#endregion-->
+
         <!--#region ___ Cancel & Save Buttons___-->
-        <StackPanel Orientation="Horizontal" Margin="450,480,450,400">
+        <StackPanel Orientation="Horizontal" Margin="450,654,450,226">
             <Button x:Name="Btn_CancelWeather" Style="{StaticResource Buttons}" Click="OnBtn_CancelWeather_Click">
                 <Image Width="250" Height="50" Margin="0 -5 0 0" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_Cancel.png"/>
             </Button>
@@ -114,6 +144,6 @@
             </Button>
         </StackPanel>
         <!--#endregion-->
-       
+
     </Grid>
 </UserControl>

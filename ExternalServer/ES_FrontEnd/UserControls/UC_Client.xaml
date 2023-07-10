@@ -16,7 +16,7 @@
         
         
         <Grid Grid.Row="0">
-            <Label Content="Client List" Height="37" Width="155" FontSize="30" FontFamily="Montserrat" Foreground="White" Margin="316,72,969,46"/>
+            <Label Content="Client List" Height="40" Width="155" FontSize="30" FontFamily="Montserrat" Foreground="White" Margin="316,72,969,46"/>
             <Button x:Name="Btn_AddClient" Height="37" Width="76" Margin="1048,72,316,46" Background="#FA9600" Content="+ Add" FontFamily="Montserrat" FontSize="20" Click="OnBtn_AddClient_Click"/>
         </Grid>
 
