@@ -106,6 +106,8 @@ namespace ES_FrontEnd
 
                 UC_ClientListItem uc_ClientListItem = new UC_ClientListItem(this, id, _ip, _commandPort, _dataPort, _clientType);
                 m_uc_client.Wrp_ClientList.Children.Add(uc_ClientListItem);
+
+                AddClientNode(id, _clientType);
             }
             else
             {
@@ -115,37 +117,6 @@ namespace ES_FrontEnd
 
         public void ChangeClient(int _id)
         {
-            #region -- old variant that works ---
-            //UC_ClientListItem listitem = (UC_ClientListItem)m_uc_client.Wrp_ClientList.Children[_id - 1];
-            //
-            //if (m_newClientWindow == null)
-            //{
-            //    // Create a new instance of the window to be spawned
-            //    m_newClientWindow = new W_AddNewClient(this);
-            //
-            //    // Set the startup location of the window to center with respect to the owner
-            //    m_newClientWindow.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            //
-            //    // Set the owner of the window
-            //    m_newClientWindow.Owner = Application.Current.MainWindow;
-            //
-            //    // Show the window
-            //    m_newClientWindow.Show();
-            //}
-            //else
-            //{
-            //    m_newClientWindow.Activate();
-            //}
-            //
-            //// show the content of that chosen Client to change
-            //m_newClientWindow.Lbl_WindowTitle.Content = "Change Client Settings";
-            //m_newClientWindow.TxtBx_ClientIP.Text = listitem.Lbl_ClientIP.Content.ToString();
-            //m_newClientWindow.TxtBx_ClientCommandPort.Text = listitem.Lbl_ClientCommandPort.Content.ToString();
-            //m_newClientWindow.TxtBx_ClientDataPort.Text = listitem.Lbl_ClientDataPort.Content.ToString();
-            //m_newClientWindow.ToggleButton.Content = listitem.Lbl_ClientType.Content.ToString();
-            //
-            #endregion
-
             Client client = m_model.Clients[_id - 1];
 
             if (m_newClientWindow == null)
@@ -168,6 +139,12 @@ namespace ES_FrontEnd
             }
         }
 
+        public void AddClientNode(int _id, EClientType _clientType)
+        {
+            UC_ClientNode clientNode = new(this, _id, _clientType);
+            m_uc_scenario.Wrp_ClientNodes.Children.Add(clientNode);
+        }
+
         public void OverrideClient(Client _client)
         {
             m_model.OverrideClient(_client);
@@ -177,7 +154,15 @@ namespace ES_FrontEnd
 
             m_uc_client.Wrp_ClientList.Children.Insert(_client.ID - 1, uc_ClientListItem);
 
+            OverrideClientNode(_client.ID - 1, _client.ClientType);
+        }
 
+        public void OverrideClientNode(int _id, EClientType _clientType)
+        {
+            m_uc_scenario.Wrp_ClientNodes.Children.RemoveAt(_id);
+            UC_ClientNode clientNode = new UC_ClientNode(this, _id + 1, _clientType);
+
+            m_uc_scenario.Wrp_ClientNodes.Children.Insert(_id, clientNode);
         }
 
         public void GetServerPorts(int _serverDataPort, int _serverCommandPort)
