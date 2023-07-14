@@ -27,7 +27,8 @@ namespace ES_FrontEnd.UserControls
 
         private void OnBtn_StartScenario_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-
+            int test = BackendInterface.TestFunction();
+            Status.Log(test.ToString());
         }
 
         private void OnStopScenario_Click(object sender, System.Windows.RoutedEventArgs e)

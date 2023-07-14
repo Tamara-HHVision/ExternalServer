@@ -24,7 +24,7 @@ namespace ES_FrontEnd
             s_Label.Content = _message;
             s_Label.Visibility = Visibility.Visible;
 
-            DispatcherTimer timer = new DispatcherTimer();
+            DispatcherTimer timer = new();
 
             // Duration of timer
             timer.Interval = TimeSpan.FromSeconds(3);

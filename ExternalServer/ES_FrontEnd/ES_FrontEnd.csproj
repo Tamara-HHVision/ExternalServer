@@ -5,6 +5,8 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+    <BaseOutputPath>C:\Users\tamara.graovac\Projects\ExternalServer\ExternalServer\Output</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
