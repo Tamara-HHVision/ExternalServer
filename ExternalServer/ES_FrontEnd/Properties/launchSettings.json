@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ES_FrontEnd": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

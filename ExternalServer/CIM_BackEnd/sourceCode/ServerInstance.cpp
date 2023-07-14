@@ -12,8 +12,6 @@
 #include "UnrealNetwork/Clients/OpenScenarioClient.h"
 #include "UnrealNetwork/UnrealCommandServer.h"
 
-#include <string_view>
-
 void CIM_Backend::ServerInstance::SetUpInstance()
 {
 	CIM_Backend::Log::Init();

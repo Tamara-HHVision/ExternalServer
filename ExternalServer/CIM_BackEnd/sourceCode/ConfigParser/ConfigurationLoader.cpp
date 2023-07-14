@@ -33,26 +33,26 @@ bool CIM_Backend::ConfigurationLoader::LoadConfig(std::string_view fileLocation)
 
 void CIM_Backend::ConfigurationLoader::LoadWorldConfig(nlohmann::json& config)
 {
-	m_maxPlayers = TryParseParameter<int>(config, "maxClients", CheckIfInt);
-	m_weather = static_cast<EWeatherSettings>(TryParseParameter<int>(config, "weatherSettings", CheckIfInt));
-	m_serverDataPort = TryParseParameter<int>(config, "serverDataPort", CheckIfInt);
-	m_serverCommandPort = TryParseParameter<int>(config, "serverCommandPort", CheckIfInt);
-	m_time = TryParseParameter<int>(config, "time", CheckIfInt);
+	m_maxPlayers = TryParseParameter<int>(config, "MaxClients", CheckIfInt);
+	m_serverDataPort = TryParseParameter<int>(config, "ServerDataPort", CheckIfInt);
+	m_serverCommandPort = TryParseParameter<int>(config, "ServerCommandPort", CheckIfInt);
+	m_weather = static_cast<EWeatherSettings>(TryParseParameter<int>(config, "WeatherSettings", CheckIfInt));
+	m_time = TryParseParameter<int>(config, "Time", CheckIfInt);
 }
 
 void CIM_Backend::ConfigurationLoader::LoadClientsConfig(nlohmann::json& config)
 {
-	m_clientConfigurations.reserve(config["clients"].size());
+	m_clientConfigurations.reserve(config["Clients"].size());
 
-	for (auto const& clientNode : config["clients"])
+	for (auto const& clientNode : config["Clients"])
 	{
-		int id = TryParseParameter<int>(clientNode, "id", CheckIfInt);
-		EClientType type = static_cast<EClientType>(TryParseParameter<int>(clientNode, "type", CheckIfInt));
+		int id = TryParseParameter<int>(clientNode, "ID", CheckIfInt);
+		EClientType type = static_cast<EClientType>(TryParseParameter<int>(clientNode, "ClientType", CheckIfInt));
 
 		ClientNetworkConfiguration networkConfiguration;
-		networkConfiguration.ip = TryParseParameter<std::string>(clientNode, "ip", CheckIfString);
-		networkConfiguration.clientDataPort = TryParseParameter<int>(clientNode, "dataPort", CheckIfInt);
-		networkConfiguration.clientCommandPort = TryParseParameter<int>(clientNode, "commandPort", CheckIfInt);
+		networkConfiguration.ip = TryParseParameter<std::string>(clientNode, "IP", CheckIfString);
+		networkConfiguration.clientDataPort = TryParseParameter<int>(clientNode, "ClientDataPort", CheckIfInt);
+		networkConfiguration.clientCommandPort = TryParseParameter<int>(clientNode, "ClientCommandPort", CheckIfInt);
 
 		switch (type)
 		{

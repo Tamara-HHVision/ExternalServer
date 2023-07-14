@@ -31,6 +31,7 @@ namespace ES_FrontEnd
             m_view = _view;
 
             Status.Init(m_view.Lbl_Status);
+            BackendInterface.SetUpBackEnd();
 
             m_uc_scenario = new UC_Scenario(this);
             m_uc_client = new UC_Client(this);

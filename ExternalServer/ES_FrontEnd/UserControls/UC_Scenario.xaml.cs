@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace ES_FrontEnd.UserControls
 {
@@ -27,12 +29,34 @@ namespace ES_FrontEnd.UserControls
 
         private void OnBtn_StartScenario_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+            try
+            {
+                if (BackendInterface.LoadConfiguration(Controller.jsonPath))
+                {
+                    Status.Log("Config successfully loaded!");
+
+                    MessageBox.Show("Started!");
+                    BackendInterface.StartUnrealLoop();
+
+                    Status.Log("Szenario started!");
+                }
+                else
+                {
+                    Status.Log("ERROR: Couldn't load config");
+                }
+            }
+            catch (Exception _exception)
+            {
+                MessageBox.Show(_exception.ToString());
+            }
+
 
         }
 
         private void OnStopScenario_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-
+            BackendInterface.ShutDownBackend();
+            Status.Log("Shut down!");
         }
 
         private void OnTxtBx_ServerDataPort_TextChanged(object sender, TextChangedEventArgs e)
