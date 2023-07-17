@@ -12,8 +12,9 @@ namespace ES_FrontEnd.UserControls
 
         EWeatherSetting m_weather;
         private Button? m_selectedButton;
-        private int m_hour = 13;
-        private int m_minute = 00;
+        private string m_hour = "13";
+        private string m_minute = "00";
+
         private string m_time = "1300";
 
         public UC_Weather(Controller _controller)
@@ -108,7 +109,7 @@ namespace ES_FrontEnd.UserControls
 
         private void OnBtn_SaveWeather_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            m_time = m_hour.ToString() + m_minute.ToString();
+            m_time = m_hour + m_minute;
             int time = int.Parse(m_time);
 
             m_controller.GetWeatherAndTimeSetting(m_weather, time);
@@ -126,19 +127,12 @@ namespace ES_FrontEnd.UserControls
 
         private void OnTxtBx_Hour_TextChanged(object sender, TextChangedEventArgs e)
         {
-            int tmpValue;
-            bool success = int.TryParse(TxtBx_Hour.Text, out tmpValue);
-
-            m_hour = tmpValue;
-
+            m_hour = TxtBx_Hour.Text;
         }
 
         private void OnTxtBx_Minute_TextChanged(object sender, TextChangedEventArgs e)
         {
-            int tmpValue;
-            bool success = int.TryParse(TxtBx_Minute.Text, out tmpValue);
-
-            m_minute = tmpValue;
+            m_minute = TxtBx_Minute.Text;
         }
     }
 }
