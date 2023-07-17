@@ -5,12 +5,12 @@ namespace CIM_Backend
 	enum class EClientType : uint8_t
 	{
 		EgoVehicle,
-		HQClient,
 		Pedestrian,
-		Observer,
-		MotionCapture,
 		VR,
 		OpenScenario,
+		HQClient,
+		Observer,
+		MotionCapture,
 		TrafficSystem,
 	};
 
