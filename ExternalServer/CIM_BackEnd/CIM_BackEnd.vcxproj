@@ -74,13 +74,13 @@
     <IntDir>$(SolutionDir)\bin\intermediatesBackEnd\$(Platform)\$(Configuration)\</IntDir>
     <IncludePath>$(SolutionDir)CIM_BackEnd/sourceCode/Enumerations;$(SolutionDir)CIM_BackEnd/sourceCode;$(IncludePath)</IncludePath>
     <ExternalIncludePath>$(SolutionDir)CIM_BackEnd/sourceCode/External;$(SolutionDir)CIM_BackEnd/sourceCode/External/pfr_non_boost-master</ExternalIncludePath>
-    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir>..\ES_FrontEnd\bin\x64\Debug\net6.0-windows</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir)\bin\intermediatesBackEnd\$(Platform)\$(Configuration)\</IntDir>
     <IncludePath>$(SolutionDir)CIM_BackEnd/sourceCode/Enumerations;$(SolutionDir)CIM_BackEnd/sourceCode;$(IncludePath)</IncludePath>
     <ExternalIncludePath>$(SolutionDir)CIM_BackEnd/sourceCode/External;$(SolutionDir)CIM_BackEnd/sourceCode/External/pfr_non_boost-master</ExternalIncludePath>
-    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir>..\ES_FrontEnd\bin\x64\Debug\net6.0-windows</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(SolutionDir)CIM_BackEnd/sourceCode/Enumerations;$(SolutionDir)CIM_BackEnd/sourceCode;$(IncludePath)</IncludePath>

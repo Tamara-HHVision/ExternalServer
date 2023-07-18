@@ -4,7 +4,8 @@ namespace ES_FrontEnd
 {
     class BackendInterface
     {
-        public const string cppBackEndDLL = "C:/Users/tamara.graovac/Projects/ExternalServer/ExternalServer/bin/x64/Debug/CIM_BackEnd.dll";
+        //public const string cppBackEndDLL = "C:/Users/tamara.graovac/Projects/ExternalServer/ExternalServer/bin/x64/Debug/CIM_BackEnd.dll";
+        public const string cppBackEndDLL = "CIM_BackEnd.dll";
 
         [DllImport(cppBackEndDLL, CallingConvention = CallingConvention.Cdecl, SetLastError = true)]
         public static extern void SetUpBackEnd();

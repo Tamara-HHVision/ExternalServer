@@ -6,10 +6,6 @@ namespace ES_FrontEnd
 {
     public class Controller
     {
-        //public static string FileName = "config.json";
-        //public static string BaseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-        //public static string FilePath = Path.Combine(BaseDirectory, FileName);
-
         public static string jsonPath = System.AppDomain.CurrentDomain.BaseDirectory + @"/config.json";
 
 
