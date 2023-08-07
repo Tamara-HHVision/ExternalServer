@@ -190,6 +190,7 @@
     <ClInclude Include="sourceCode\External\nlohmann\detail\input\lexer.hpp" />
     <ClInclude Include="sourceCode\External\nlohmann\detail\input\parser.hpp" />
     <ClInclude Include="sourceCode\External\nlohmann\detail\input\position_t.hpp" />
+    <ClInclude Include="sourceCode\UnrealNetwork\Clients\ControlCenterClient.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sourceCode\cim_pch.cpp" />
@@ -209,6 +210,7 @@
     <ClCompile Include="sourceCode\UnrealNetwork\UnrealCommandServer.cpp" />
     <ClCompile Include="sourceCode\UnrealNetwork\Clients\OpenScenarioClient.cpp" />
     <ClCompile Include="sourceCode\UnrealNetwork\Clients\VRClient.cpp" />
+    <ClCompile Include="sourceCode\UnrealNetwork\Clients\ControlCenterClient.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="sourceCode\External\pfr_non_boost-master\LICENSE_1_0.txt" />

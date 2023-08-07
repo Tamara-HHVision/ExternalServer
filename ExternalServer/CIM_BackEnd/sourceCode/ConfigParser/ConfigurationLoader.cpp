@@ -106,6 +106,11 @@ void CIM_Backend::ConfigurationLoader::LoadClientsConfig(nlohmann::json& config)
 			m_clientConfigurations.push_back(new PedestrianConfiguration(id, type, networkConfiguration));
 		}
 		break;
+		case EClientType::ControlCenter:
+		{
+			m_clientConfigurations.push_back(new ControlCenterConfiguration(id, type, networkConfiguration));
+		}
+		break;
 		case EClientType::Observer:
 		{
 			bool useVR = TryParseParameter<bool>(clientNode, "useVR", CheckIfBool);

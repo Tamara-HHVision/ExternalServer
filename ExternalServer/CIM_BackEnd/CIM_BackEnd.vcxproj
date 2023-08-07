@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="sourceCode\UnrealNetwork\Clients\ControlCenterClient.h" />
     <ClInclude Include="sourceCode\External\nlohmann\adl_serializer.hpp" />
     <ClInclude Include="sourceCode\External\nlohmann\byte_container_with_subtype.hpp" />
     <ClInclude Include="sourceCode\External\nlohmann\detail\conversions\from_json.hpp" />
@@ -342,6 +343,7 @@
     <ClInclude Include="sourceCode\UnrealNetwork\Clients\VRClient.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="sourceCode\UnrealNetwork\Clients\ControlCenterClient.cpp" />
     <ClCompile Include="sourceCode\cim_pch.cpp" />
     <ClCompile Include="sourceCode\ConfigParser\ConfigurationLoader.cpp" />
     <ClCompile Include="sourceCode\EntryPoint.cpp" />

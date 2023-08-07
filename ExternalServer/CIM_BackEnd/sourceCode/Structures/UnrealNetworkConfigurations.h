@@ -64,6 +64,15 @@ namespace CIM_Backend
 		};
 	};
 
+	struct ControlCenterConfiguration : IClientConfiguration
+	{
+		ControlCenterConfiguration(int id, EClientType type, ClientNetworkConfiguration networkConfiguration)
+			: IClientConfiguration(id, type, networkConfiguration)
+		{
+
+		};
+	};
+
 	struct ObserverConfiguration : IClientConfiguration
 	{
 		const bool useVR;

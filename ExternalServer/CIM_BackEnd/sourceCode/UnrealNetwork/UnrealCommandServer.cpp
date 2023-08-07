@@ -122,6 +122,11 @@ void CIM_Backend::UnrealCommandServer::SendClientConfigurationToClient(const std
 			return;
 		}
 		break;
+		case EClientType::ControlCenter:
+		{
+			SendCommand(_client, ECommandType::ClientConfiguration, baseClientPacket);
+			return;
+		}
 		case EClientType::MotionCapture:
 		{
 			MotionCaptureClient* moCapClient = static_cast<MotionCaptureClient*>(_client.get());

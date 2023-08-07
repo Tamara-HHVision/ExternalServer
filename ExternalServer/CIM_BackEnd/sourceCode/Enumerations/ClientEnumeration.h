@@ -7,6 +7,7 @@ namespace CIM_Backend
 		EgoVehicle,
 		Pedestrian,
 		VR,
+		ControlCenter,
 		OpenScenario,
 		HQClient,
 		Observer,
