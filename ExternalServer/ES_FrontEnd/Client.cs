@@ -5,6 +5,7 @@
         VESSEL,
         PEDESTRIAN,
         VR,
+        CONTROLCENTER,
         OPENSCENARIO,
     }
 

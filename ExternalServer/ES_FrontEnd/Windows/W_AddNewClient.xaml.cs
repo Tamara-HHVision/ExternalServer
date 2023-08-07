@@ -116,9 +116,16 @@ namespace ES_FrontEnd.Windows
         private void OnBtn_VRType_Click(object sender, RoutedEventArgs e)
         {
             ToggleButton.Content = "VR";
-            m_clientType |= EClientType.VR;
+            m_clientType = EClientType.VR;
             Ppp_ClientType.IsOpen = !Ppp_ClientType.IsOpen;
 
+        }
+
+        private void OnBtn_ControlCenterType_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButton.Content = "Control Center";
+            m_clientType = EClientType.CONTROLCENTER;
+            Ppp_ClientType.IsOpen = !Ppp_ClientType.IsOpen;
         }
         #endregion
 
@@ -127,6 +134,7 @@ namespace ES_FrontEnd.Windows
         {
             Ppp_ClientType.IsOpen = !Ppp_ClientType.IsOpen;
         }
+
 
     }
 }

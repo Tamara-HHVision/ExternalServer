@@ -108,9 +108,10 @@
         <Button Style="{StaticResource DropDownButtons}" x:Name="ToggleButton" Content="Select an option" Click="ToggleButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="386 195 26 116" />
         <Popup x:Name="Ppp_ClientType" IsOpen="{Binding IsPopupOpen, RelativeSource={RelativeSource AncestorType=Window}}" Placement="Bottom" PlacementTarget="{Binding ElementName=ToggleButton}" StaysOpen="False" Focusable="False" >
             <StackPanel Background="White" >
-                <Button x:Name="Btn_ShipType"       Style="{StaticResource DropDownButtons}" Content="Ship"       Click="OnBtn_ShipType_Click"/>
-                <Button x:Name="Btn_PedestrianType" Style="{StaticResource DropDownButtons}" Content="Pedestiran" Click="OnBtn_PedestrianType_Click"/>
-                <Button x:Name="Btn_VRType"         Style="{StaticResource DropDownButtons}" Content="VR"         Click="OnBtn_VRType_Click"/>
+                <Button x:Name="Btn_ShipType"          Style="{StaticResource DropDownButtons}" Content="Ship"          Click="OnBtn_ShipType_Click"/>
+                <Button x:Name="Btn_PedestrianType"    Style="{StaticResource DropDownButtons}" Content="Pedestiran"    Click="OnBtn_PedestrianType_Click"/>
+                <Button x:Name="Btn_VRType"            Style="{StaticResource DropDownButtons}" Content="VR"            Click="OnBtn_VRType_Click"/>
+                <Button x:Name="Btn_ControlCenterType" Style="{StaticResource DropDownButtons}" Content="ControlCenter" Click="OnBtn_ControlCenterType_Click"/>
             </StackPanel>
         </Popup>
         

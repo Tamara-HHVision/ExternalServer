@@ -33,6 +33,10 @@ namespace ES_FrontEnd.UserControls
                 Img_ClientType.Source = new BitmapImage(new System.Uri("pack://application:,,,/ES_FrontEnd;component/Resources/Icons/Icn_VR.png"));
                 break;
 
+                case EClientType.CONTROLCENTER:
+                Img_ClientType.Source = new BitmapImage(new System.Uri("pack://application:,,,/ES_FrontEnd;component/Resources/Icons/Icn_VR.png"));
+                break;
+
                 default:
                 Img_ClientType.Source = new BitmapImage(new System.Uri("pack://application:,,,/ES_FrontEnd;component/Resources/Icons/Icn_Ship.png"));
                 break;
