@@ -11,8 +11,8 @@ namespace ES_FrontEnd.UserControls
     {
         Controller m_controller;
 
-        private int m_serverDataPort;
-        private int m_serverCommandPort;
+        private int m_serverDataPort = 5000;
+        private int m_serverCommandPort = 5001;
 
         public UC_Scenario(Controller _controller)
         {

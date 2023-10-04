@@ -127,8 +127,8 @@
         <!--#region ___ Time Setting ___-->
         <Grid Margin="250,474,250,331">
             <Label Content="Time" Style="{StaticResource InputLabel}" Margin="380,25,445,90"/>
-            <TextBox x:Name="TxtBx_Hour" Style="{StaticResource UserInput}" Margin="364,55,496,39" TextChanged="OnTxtBx_Hour_TextChanged"/>
-            <TextBox x:Name="TxtBx_Minute" Style="{StaticResource UserInput}" Margin="464,54,396,40" TextChanged="OnTxtBx_Minute_TextChanged"/>
+            <TextBox x:Name="TxtBx_Hour" Text="13" Style="{StaticResource UserInput}" Margin="364,55,496,39" TextChanged="OnTxtBx_Hour_TextChanged"/>
+            <TextBox x:Name="TxtBx_Minute" Text="00" Style="{StaticResource UserInput}" Margin="464,54,396,40" TextChanged="OnTxtBx_Minute_TextChanged"/>
             <Label Content=":" VerticalContentAlignment="Center" FontSize="50" Foreground="White" Width="20" Margin="444,0,476,0" />
         </Grid>
         <!--#endregion-->

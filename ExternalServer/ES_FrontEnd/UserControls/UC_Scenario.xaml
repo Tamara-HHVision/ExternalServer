@@ -85,8 +85,8 @@
                 <Label Style="{StaticResource InputLabel}" Content="Server Data Port"    Margin="24 24 669 175"/>
                 <Label Style="{StaticResource InputLabel}" Content="Server Command Port" Margin="416 24 235 175"/>
 
-                <TextBox x:Name="TxtBx_ServerDataPort" Style="{StaticResource UserInput}" Margin="24 47 416 123" TextChanged="OnTxtBx_ServerDataPort_TextChanged"/>
-                <TextBox x:Name="TxtBx_ServerCommandPort" Style="{StaticResource UserInput}" Margin="416 47 24 123" TextChanged="OnTxtBx_ServerCommandPort_TextChanged"/>
+                <TextBox x:Name="TxtBx_ServerDataPort" Text="5000" Style="{StaticResource UserInput}" Margin="24 47 416 123" TextChanged="OnTxtBx_ServerDataPort_TextChanged"/>
+                <TextBox x:Name="TxtBx_ServerCommandPort" Text="5001"  Style="{StaticResource UserInput}" Margin="416 47 24 123" TextChanged="OnTxtBx_ServerCommandPort_TextChanged"/>
 
                 <Button x:Name="Btn_SaveConfig" Style="{StaticResource ScenarioButtons}" Margin="279 148 279 24" Padding="-0 -50 0 0" VerticalContentAlignment="Center" Click="OnBtn_SaveConfig_Click">
                     <Image Width="250" Height="50" Margin="0 -5 0 0" Source="pack://application:,,,/ES_FrontEnd;component/Resources/Images/Btn_SaveConfig.png"/>

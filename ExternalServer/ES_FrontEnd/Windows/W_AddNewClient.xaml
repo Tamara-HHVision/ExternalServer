@@ -97,10 +97,10 @@
         <TextBox x:Name="TxtBx_ClientIP" Style="{StaticResource InputField}" Text="127.0.0.0" Margin="24 102 388 209" TextChanged="OnTxtBx_ClientIP_TextChanged"/>
 
         <Label Style="{StaticResource TextLabel}" Content="Client Command Port" Margin="386 79 205 261"/>
-        <TextBox x:Name="TxtBx_ClientCommandPort" Style="{StaticResource InputField}" Text="5555" Margin="386 102 26 209" TextChanged="OnTxtBx_ClientCommandPort_TextChanged"/>
+        <TextBox x:Name="TxtBx_ClientCommandPort" Style="{StaticResource InputField}" Text="5100" Margin="386 102 26 209" TextChanged="OnTxtBx_ClientCommandPort_TextChanged"/>
 
         <Label Style="{StaticResource TextLabel}" Content="Client Data Port" Margin="24 172 611 168"/>
-        <TextBox x:Name="TxtBx_ClientDataPort" Style="{StaticResource InputField}" Text="5555" Margin="24 195 388 116" TextChanged="OnTxtBx_ClientDataPort_TextChanged"/>
+        <TextBox x:Name="TxtBx_ClientDataPort" Style="{StaticResource InputField}" Text="5001" Margin="24 195 388 116" TextChanged="OnTxtBx_ClientDataPort_TextChanged"/>
 
         <Label Style="{StaticResource TextLabel}" Content="ClientType" Margin="386 172 184 168"/>
 

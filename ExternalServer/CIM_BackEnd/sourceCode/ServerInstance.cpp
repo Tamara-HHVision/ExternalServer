@@ -9,6 +9,7 @@
 #include "UnrealNetwork/Clients/MotionCaptureClient.h"
 #include "UnrealNetwork/Clients/ObserverClient.h"
 #include "UnrealNetwork/Clients/VRClient.h"
+#include "UnrealNetwork/Clients/ControlCenterClient.h"
 #include "UnrealNetwork/Clients/OpenScenarioClient.h"
 #include "UnrealNetwork/UnrealCommandServer.h"
 
@@ -96,6 +97,11 @@ void CIM_Backend::ServerInstance::SpawnPresetClientsFromConfig()
 				case EClientType::Pedestrian:
 				{
 					m_Clients.push_back(std::make_unique<PedestrianClient>((PedestrianConfiguration*)clientConfig));
+				}
+				break;
+				case EClientType::ControlCenter:
+				{
+					m_Clients.push_back(std::make_unique<ControlCenterClient>((ControlCenterConfiguration*)clientConfig));
 				}
 				break;
 				case EClientType::MotionCapture:

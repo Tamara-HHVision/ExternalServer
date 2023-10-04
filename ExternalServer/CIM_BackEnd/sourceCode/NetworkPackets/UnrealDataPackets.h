@@ -41,11 +41,11 @@ namespace CIM_Backend
 		UnrealTypesEmulator::Vector3D bodyLocation;
 		UnrealTypesEmulator::Rotator3D bodyRotation;
 
-		//UnrealTypesEmulator::Vector3D leftHandLocation;
-		//UnrealTypesEmulator::Rotator3D leftHandbodyRotation;
-		//
-		//UnrealTypesEmulator::Vector3D rightHandbodyLocation;
-		//UnrealTypesEmulator::Rotator3D rightHandbodyRotation;
+		UnrealTypesEmulator::Vector3D leftHandLocation;
+		UnrealTypesEmulator::Rotator3D leftHandbodyRotation;
+		
+		UnrealTypesEmulator::Vector3D rightHandbodyLocation;
+		UnrealTypesEmulator::Rotator3D rightHandbodyRotation;
 	};
 
 	struct EgoCarTransformPacket // A Packet Struct holding Car Transfrom Representation according to the "Five Body Model"
